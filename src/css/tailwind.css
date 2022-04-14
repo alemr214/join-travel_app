@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card{
+    @apply w-48 h-64 shadow-lg rounded-lg bg-red-200 flex-none  transform transition-all hover:-translate-y-4 hover:shadow-xl;
+}
+
+.card__title{
+    @apply text-3xl px-8 pt-8 pb-3 font-semibold text-white;
+}
