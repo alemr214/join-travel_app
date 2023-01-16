@@ -1,399 +1,365 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{dark:false}" x-bind:class="dark ? 'dark' : ''"></html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./public/css/tailwind.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-			rel="stylesheet"
-		/>
-		<title>Platzi travel</title>
-	</head>
-	<body class="font-Monserrat dark:bg-gray-900">
-		<nav
-			class="w-full h-14 hidden bg-white md:flex p-4 justify-between dark:bg-gray-800 fixed z-10"
-		>
-			<div class="h-auto w-auto">
-				<p class="text-xl text-primary font-black dark:text-white">
-					Platzi Travel
-				</p>
-			</div>
-			<div class="flex space-x-8">
-				<a
-					class="font-bold text-md text-primary dark:text-white"
-					href="#home"
-					>Inicio</a
-				>
-				<a
-					class="font-bold text-md text-primary dark:text-white"
-					href="#recomendados"
-					>Recomendado</a
-				>
-				<a
-					class="font-bold text-md text-primary dark:text-white"
-					href="#rentas__destacadas"
-					>Rentas</a
-				>
-				<a
-					class="font-bold text-md text-primary dark:text-white"
-					href="#faq"
-					>FAQs</a
-				>
-				<a
-					class="font-bold text-md text-primary dark:text-white"
-					href="#Sobre-nosotros"
-					>Sobre nosotros</a
-				>
-			</div>
-			<div class="flex space-x-3">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="20"
-					height="20"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-					/>
-				</svg>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="20"
-					height="20"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path
-					x-on:click="dark=!dark"
-						class="fill-current dark:text-white"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-					/>
-				</svg>
-			</div>
-		</nav>
-		<section class="w-full h-full">
-			<div class="w-full h-3/4" id="home">
-				<div class="w-full h-full">
-					<div
-						class="w-full h-full flex flex-col absolute space-y-80 py-5 items-center md:space-y-0 md:items-start md:pt-32 md:justify-start"
-					>
-						<input
-							class="border-none p-3 rounded-full shadow-sm transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 md:hidden"
-							type="search"
-							name=""
-							id="search"
-							placeholder="Search"
-						/>
-						<div class="hidden h-auto md:w-2/3 md:flex pb-6">
-							<p class="text-4xl ml-16 font-bold">
-								Encuentra mas ubicaciones como esta
-							</p>
-						</div>
-						<button
-							class="bg-white w-36 rounded-full font-semibold p-3 text-lg text-primary transition duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 md:ml-16"
-						>
-							Explora
-						</button>
-					</div>
-					<div
-						class="w-full h-full md:h-96 bg-sanFranciscoDesktop md:bg-cover md:bg-center"
-					>
-						<img class="md:hidden" src="./public/img/sanFrancisco.jpg" alt="" />
-					</div>
-				</div>
-			</div>
-			<div class="p-6" id="recomendados">
-				<p
-					class="text-3xl font-semibold text-primary pt-3 pb-3 dark:text-white"
-				>
-					Recomendados
-				</p>
-				<div
-					class="w-auto h-72 items-center mt-6 overflow-x-auto overscroll-x-contain space-x-6 flex"
-				>
-					<div class="card">
-						<div
-							class="w-full h-3/5 rounded-t-lg bg-norway bg-cover"
-						></div>
-						<div
-							class="w-full h-2/5 p-6 bg-secondary rounded-b-lg dark:bg-gray-800"
-						>
-							<p class="text-white font-bold text-lg">Noruega</p>
-							<p class="text-white text-sm">
-								Encantador paisaje de Noruega
-							</p>
-						</div>
-					</div>
-					<div class="card">
-						<div
-							class="w-full h-3/5 rounded-t-lg bg-new_york bg-cover"
-						></div>
-						<div
-							class="w-full h-2/5 p-6 bg-white rounded-b-lg dark:bg-gray-400"
-						>
-							<p class="text-tertiary font-bold text-lg dark:text-white">
-								New York
-							</p>
-							<p class="text-tertiary text-sm dark:text-white">
-								Encantador paisaje de New York
-							</p>
-						</div>
-					</div>
-					<div class="card">
-						<div
-							class="w-full h-3/5 rounded-t-lg bg-seattle bg-cover"
-						></div>
-						<div
-							class="w-full h-2/5 p-6 bg-secondary rounded-b-lg dark:bg-gray-800"
-						>
-							<p class="text-white font-bold text-lg">Seattle</p>
-							<p class="text-white text-sm">
-								Encantador paisaje de Seattle
-							</p>
-						</div>
-					</div>
-					<div class="card">
-						<div
-							class="w-full h-3/5 rounded-t-lg bg-yosemite bg-cover"
-						></div>
-						<div
-							class="w-full h-2/5 p-6 bg-white rounded-b-lg dark:bg-gray-400"
-						>
-							<p class="text-tertiary font-bold text-lg dark:text-white">
-								Yosemite
-							</p>
-							<p class="text-tertiary text-sm dark:text-white">
-								Encantador paisaje de Yosemite
-							</p>
-						</div>
-					</div>
-					<div class="card">
-						<div
-							class="w-full h-3/5 rounded-t-lg bg-europe bg-cover"
-						></div>
-						<div
-							class="w-full h-2/5 p-6 bg-secondary rounded-b-lg dark:bg-gray-800"
-						>
-							<p class="text-white font-bold text-lg">Europa</p>
-							<p class="text-white text-sm">
-								Encantador paisaje de Europa
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="rentas__destacadas" class="p-6 h-full w-full">
-				<p class="text-3xl text-primary font-semibold dark:text-white">
-					Trending Stays
-				</p>
-				<div
-					class="w-full h-full flex flex-col space-y-4 items-center justify-center mt-6"
-				>
-					<div
-						class="w-full h-96 bg-chicago bg-cover rounded-xl md:h-[38rem] md:text-right md:bg-center md:pt-12"
-					>
-						<p class="card__title">Chicago</p>
-						<p class="text-sm pl-8 text-white mr-24 md:mr-8 md:text-base">
-							2 rooms, bathroom and kitchen.
-						</p>
-					</div>
-					<div
-						class="w-full h-full grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 md:place-items-center md:place-content-stretch gap-4"
-					>
-						<div
-							class="w-full h-96 bg-LA bg-cover rounded-xl md:row-span-2 md:col-span-2 md:h-[49rem] md:text-right md:bg-center md:pt-12"
-						>
-							<p class="card__title">Los Angeles</p>
-							<p
-								class="text-sm pl-8 text-white mr-24 md:mr-8 md:text-base"
-							>
-								4 rooms, 3 bathrooms, kitchen and private pool.
-							</p>
-						</div>
-						<div
-							class="w-full h-96 bg-miami bg-cover rounded-xl md:row-span-1 md:col-span-3 md:text-right md:bg-center md:pt-12"
-						>
-							<p class="card__title">Miami</p>
-							<p
-								class="text-sm pl-8 text-white mr-24 md:mr-8 md:text-base"
-							>
-								3 rooms, 2 bathrooms, kitchen and amazing sea view.
-							</p>
-						</div>
-						<div
-							class="w-full h-96 bg-bali bg-cover rounded-xl md:row-span-1 md:col-span-3 md:text-right md:bg-center md:pt-12"
-						>
-							<p class="card__title">Bali</p>
-							<p
-								class="text-sm pl-8 text-white mr-24 md:mr-8 md:text-base"
-							>
-								2 rooms, 2 bathrooms, kitchen and private pool.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="w-full h-full pt-12" id="faq">
-				<div class="w-full h-full px-6 flex flex-col space-y-4 mt-6">
-					<p class="text-3xl text-primary font-semibold dark:text-white">
-						FAQs
-					</p>
-					<div>
-						<p
-							class="text-xl font-medium text-primary dark:text-secondary"
-						>
-							Política de Cancelación
-						</p>
-						<p class="text-md pt-2 dark:text-white">
-							Para estancias menores a una semana es importante avisar
-							con 3 días de anticipación, de caso contario será
-							sancionado.
-						</p>
-					</div>
-					<div>
-						<p
-							class="text-xl font-medium text-primary dark:text-secondary"
-						>
-							Métodos de pago
-						</p>
-						<p class="text-md pt-2 dark:text-white">
-							Aceptamos distintos métodos de pago: VISA, MasterCard,
-							American Express, Paypal y Binance
-						</p>
-					</div>
-					<div>
-						<p
-							class="text-xl font-medium text-primary dark:text-secondary"
-						>
-							Mascotas
-						</p>
-						<p class="text-md pt-2 dark:text-white">
-							El tema de las mascotas dependerá directamente del
-							anfitrión.
-						</p>
-					</div>
-					<div>
-						<p
-							class="text-xl font-medium text-primary dark:text-secondary"
-						>
-							Información de Seguridad
-						</p>
-						<p class="text-md pt-2 dark:text-white">
-							Todas nuestras estancias cuentan con seguro en caso de
-							accidentes
-						</p>
-					</div>
-					<div>
-						<p
-							class="text-xl font-medium text-primary dark:text-secondary"
-						>
-							Estancias Largas
-						</p>
-						<p class="text-md pt-2 dark:text-white">
-							Contamos con estancias de hasta 3 meses, en este caso es
-							requerido un anticipo con un monto del 50% del valor de la
-							renta
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<footer
-			id="Sobre-nosotros"
-			class="w-full h-auto bg-gray-50 dark:bg-gray-800 p-6 space-y-3"
-		>
-			<p class="text-lg dark:text-white">Acerca De...</p>
-			<p class="text-sm text-gray-300">Inversionistas</p>
-			<p class="text-sm text-gray-300">Empleos</p>
-			<p class="text-sm text-gray-300">Terminos y condiciones</p>
-			<p class="text-sm text-gray-300">Platzi travel</p>
-		</footer>
-		<div
-			class="w-full h-16 bg-gray-50 fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center md:hidden dark:bg-gray-700"
-			id="tab_var"
-		>
-			<a href="#home">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="30"
-					height="30"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-					/>
-				</svg>
-			</a>
-			<a href="#search">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="30"
-					height="30"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-					/>
-				</svg>
-			</a>
-			<a href="#destacados">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="30"
-					height="30"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-					/>
-				</svg>
-			</a>
-			<button x-on:click="dark=!dark">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="30"
-					height="30"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-					/>
-				</svg>
-			</button>
-		</div>
-		<script src="//unpkg.com/alpinejs" defer></script>
-	</body>
+<html lang="en" x-data="{dark:false}" x-bind:class="dark ? 'dark' : ''">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/css/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Join Travel</title>
+  </head>
+  <body class="font-Monserrat dark:bg-gray-900">
+    <nav
+      class="w-full h-14 hidden bg-white md:flex p-4 justify-between dark:bg-gray-800 fixed z-10"
+    >
+      <div class="h-auto w-auto">
+        <p class="text-xl text-primary font-black dark:text-white">
+          Join Travel
+        </p>
+      </div>
+      <div class="flex space-x-8">
+        <a class="font-bold text-md text-primary dark:text-white" href="#home"
+          >Inicio</a
+        >
+        <a
+          class="font-bold text-md text-primary dark:text-white"
+          href="#recomendados"
+          >Recomendado</a
+        >
+        <a
+          class="font-bold text-md text-primary dark:text-white"
+          href="#rentas__destacadas"
+          >Rentas</a
+        >
+        <a class="font-bold text-md text-primary dark:text-white" href="#faq"
+          >FAQs</a
+        >
+        <a
+          class="font-bold text-md text-primary dark:text-white"
+          href="#Sobre-nosotros"
+          >Sobre nosotros</a
+        >
+      </div>
+      <div class="flex space-x-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            x-on:click="dark=!dark"
+            class="fill-current dark:text-white"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          />
+        </svg>
+      </div>
+    </nav>
+    <section class="w-full h-full">
+      <div class="w-full h-3/4" id="home">
+        <div class="w-full h-full">
+          <div
+            class="w-full h-full flex flex-col absolute space-y-80 py-5 items-center md:space-y-0 md:items-start md:pt-32 md:justify-start"
+          >
+            <input
+              class="border-none p-3 rounded-full shadow-sm transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 md:hidden"
+              type="search"
+              name=""
+              id="search"
+              placeholder="Search"
+            />
+            <div class="hidden h-auto md:w-2/3 md:flex pb-6">
+              <p class="text-4xl ml-16 font-bold">
+                Encuentra mas ubicaciones como esta
+              </p>
+            </div>
+            <button
+              class="bg-white w-36 rounded-full font-semibold p-3 text-lg text-primary transition duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 md:ml-16"
+            >
+              Explora
+            </button>
+          </div>
+          <div
+            class="w-full h-full md:h-96 bg-sanFranciscoDesktop md:bg-cover md:bg-center"
+          >
+            <img class="md:hidden" src="./public/img/sanFrancisco.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="p-6" id="recomendados">
+        <p
+          class="text-3xl font-semibold text-primary pt-3 pb-3 dark:text-white"
+        >
+          Recomendados
+        </p>
+        <div
+          class="w-auto h-72 items-center mt-6 overflow-x-auto overscroll-x-contain space-x-6 flex"
+        >
+          <div class="card">
+            <div class="w-full h-3/5 rounded-t-lg bg-norway bg-cover"></div>
+            <div
+              class="w-full h-2/5 p-6 bg-secondary rounded-b-lg dark:bg-gray-800"
+            >
+              <p class="text-white font-bold text-lg">Noruega</p>
+              <p class="text-white text-sm">
+                Ven a esquiar en los montes Norugeos
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full h-3/5 rounded-t-lg bg-new_york bg-cover"></div>
+            <div
+              class="w-full h-2/5 p-6 bg-white rounded-b-lg dark:bg-gray-400"
+            >
+              <p class="text-tertiary font-bold text-lg dark:text-white">
+                New York
+              </p>
+              <p class="text-tertiary text-sm dark:text-white">
+                Visita la hermosa estatua de la libertad
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full h-3/5 rounded-t-lg bg-seattle bg-cover"></div>
+            <div
+              class="w-full h-2/5 p-6 bg-secondary rounded-b-lg dark:bg-gray-800"
+            >
+              <p class="text-white font-bold text-lg">Seattle</p>
+              <p class="text-white text-sm">
+                Lindas vistas a las cataratas en Seattle</p
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full h-3/5 rounded-t-lg bg-yosemite bg-cover"></div>
+            <div
+              class="w-full h-2/5 p-6 bg-white rounded-b-lg dark:bg-gray-400"
+            >
+              <p class="text-tertiary font-bold text-lg dark:text-white">
+                Yosemite
+              </p>
+              <p class="text-tertiary text-sm dark:text-white">
+                Maravillate en el parque nacional de Yosemite
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="w-full h-3/5 rounded-t-lg bg-europe bg-cover"></div>
+            <div
+              class="w-full h-2/5 p-6 bg-secondary rounded-b-lg dark:bg-gray-800"
+            >
+              <p class="text-white font-bold text-lg">Europa</p>
+              <p class="text-white text-sm">
+                Recorre Europa en nuestro gran tour</p
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="rentas__destacadas" class="p-6 h-full w-full">
+        <p class="text-3xl text-primary font-semibold dark:text-white">
+          Trending Stays
+        </p>
+        <div
+          class="w-full h-full flex flex-col space-y-4 items-center justify-center mt-6"
+        >
+          <div
+            class="w-full h-96 bg-chicago bg-cover rounded-xl md:h-[38rem] md:text-right md:bg-center md:pt-12"
+          >
+            <p class="card__title">Chicago</p>
+            <p class="text-sm pl-8 text-white mr-24 md:mr-8 md:text-base">
+              2 rooms, bathroom and kitchen.
+            </p>
+          </div>
+          <div
+            class="w-full h-full grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 md:place-items-center md:place-content-stretch gap-4"
+          >
+            <div
+              class="w-full h-96 bg-LA bg-cover rounded-xl md:row-span-2 md:col-span-2 md:h-[49rem] md:text-right md:bg-center md:pt-12"
+            >
+              <p class="card__title">Los Angeles</p>
+              <p class="text-sm pl-8 text-white mr-24 md:mr-8 md:text-base">
+                4 rooms, 3 bathrooms, kitchen and private pool.
+              </p>
+            </div>
+            <div
+              class="w-full h-96 bg-miami bg-cover rounded-xl md:row-span-1 md:col-span-3 md:text-right md:bg-center md:pt-12"
+            >
+              <p class="card__title">Miami</p>
+              <p class="text-sm pl-8 text-white mr-24 md:mr-8 md:text-base">
+                3 rooms, 2 bathrooms, kitchen and amazing sea view.
+              </p>
+            </div>
+            <div
+              class="w-full h-96 bg-bali bg-cover rounded-xl md:row-span-1 md:col-span-3 md:text-right md:bg-center md:pt-12"
+            >
+              <p class="card__title">Bali</p>
+              <p class="text-sm pl-8 text-white mr-24 md:mr-8 md:text-base">
+                2 rooms, 2 bathrooms, kitchen and private pool.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-full pt-12" id="faq">
+        <div class="w-full h-full px-6 flex flex-col space-y-4 mt-6">
+          <p class="text-3xl text-primary font-semibold dark:text-white">
+            FAQs
+          </p>
+          <div>
+            <p class="text-xl font-medium text-primary dark:text-secondary">
+              Política de Cancelación
+            </p>
+            <p class="text-md pt-2 dark:text-white">
+              Para estancias menores a una semana es importante avisar con 3
+              días de anticipación, de caso contario será sancionado.
+            </p>
+          </div>
+          <div>
+            <p class="text-xl font-medium text-primary dark:text-secondary">
+              Métodos de pago
+            </p>
+            <p class="text-md pt-2 dark:text-white">
+              Aceptamos distintos métodos de pago: VISA, MasterCard, American
+              Express, Paypal y Binance
+            </p>
+          </div>
+          <div>
+            <p class="text-xl font-medium text-primary dark:text-secondary">
+              Mascotas
+            </p>
+            <p class="text-md pt-2 dark:text-white">
+              El tema de las mascotas dependerá directamente del anfitrión.
+            </p>
+          </div>
+          <div>
+            <p class="text-xl font-medium text-primary dark:text-secondary">
+              Información de Seguridad
+            </p>
+            <p class="text-md pt-2 dark:text-white">
+              Todas nuestras estancias cuentan con seguro en caso de accidentes
+            </p>
+          </div>
+          <div>
+            <p class="text-xl font-medium text-primary dark:text-secondary">
+              Estancias Largas
+            </p>
+            <p class="text-md pt-2 dark:text-white">
+              Contamos con estancias de hasta 3 meses, en este caso es requerido
+              un anticipo con un monto del 50% del valor de la renta
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      id="Sobre-nosotros"
+      class="w-full h-auto bg-gray-50 dark:bg-gray-800 p-6 space-y-3"
+    >
+      <p class="text-lg dark:text-white">Acerca De...</p>
+      <p class="text-sm text-gray-300">Inversionistas</p>
+      <p class="text-sm text-gray-300">Empleos</p>
+      <p class="text-sm text-gray-300">Terminos y condiciones</p>
+      <p class="text-sm text-gray-300">Join Travel</p>
+    </footer>
+    <div
+      class="w-full h-16 bg-gray-50 fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center md:hidden dark:bg-gray-700"
+      id="tab_var"
+    >
+      <a href="#home">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+          />
+        </svg>
+      </a>
+      <a href="#search">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+      </a>
+      <a href="#destacados">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
+        </svg>
+      </a>
+      <button x-on:click="dark=!dark">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          />
+        </svg>
+      </button>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
 </html>
