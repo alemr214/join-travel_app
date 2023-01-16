@@ -1,6 +1,6 @@
 # Join Travel
 
-Proyecto creado durante el curso básico de [Tailwind](https://tailwindcss.com/ "Tailwind") en la plataforma de *Platzi* impartido por la instructora ** Ana Maria**
+Proyecto creado durante el curso básico de [Tailwind](https://tailwindcss.com/ "Tailwind") en la plataforma de *Platzi* impartido por la instructora **Ana Maria**
 
 
 ## Comenzando 🚀
